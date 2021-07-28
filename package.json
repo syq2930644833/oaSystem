@@ -3,15 +3,30 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@bytemd/plugin-breaks": "^1.10.13",
+    "@bytemd/plugin-footnotes": "^1.10.13",
+    "@bytemd/plugin-frontmatter": "^1.10.13",
+    "@bytemd/plugin-gemoji": "^1.10.13",
+    "@bytemd/plugin-gfm": "^1.10.13",
+    "@bytemd/plugin-highlight": "^1.10.13",
+    "@bytemd/plugin-math": "^1.10.13",
+    "@bytemd/plugin-medium-zoom": "^1.10.13",
+    "@bytemd/plugin-mermaid": "^1.10.13",
+    "@bytemd/vue": "^1.10.13",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "element-ui": "^2.15.3",
+    "js-cookie": "^3.0.0",
+    "nprogress": "^0.2.0",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
-    "vuex": "^3.4.0"
+    "vuex": "^3.4.0",
+    "webpack": "^4.0.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.0",
