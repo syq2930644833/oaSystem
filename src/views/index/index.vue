@@ -25,6 +25,7 @@
       </el-form-item>
     </el-form>
     <Editor :value="value" :plugins="plugins" @change="handleChange" />
+    <el-button type="primary" class="saveArticle" @click="editorSave"> 提交文章 </el-button>
   </div>
 </template>
 
@@ -154,7 +155,7 @@ export default {
     imgDel(){
 
     },
-    editorSave(value,render){
+    editorSave(){
         this.$refs['form'].validate((valid) => {
           if (valid) {
             let params = {
@@ -164,8 +165,8 @@ export default {
               type: this.form.type,
               introduction: this.form.introduction,
               comments: {
-                  commentStr: value,
-                  commentHtml: render
+                  commentStr: this.value,
+                  // commentHtml: render
               }
             }
             Test.CreateArticle(params).then(({code,message}) => {
@@ -221,6 +222,9 @@ export default {
         height: calc(100vh - 200px);
         border: 1px solid #eee;
         border-radius: 20px;
+    }
+    .saveArticle{
+      margin-top: 20px;
     }
 }
 </style>
